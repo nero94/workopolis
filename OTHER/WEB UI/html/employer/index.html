@@ -1,0 +1,139 @@
+<head>
+   <title>Employer profile</title>
+     <link rel="stylesheet" href="html/employer/style.css" charset="utf-8">
+   <link rel="stylesheet" href="html/vacancies/filter-bar.css" charset="utf-8">
+</head>
+<div id="employer_profile">
+<div class="container">
+   <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+         <div class="panel panel-default">
+            <div class="panel-body">
+                  <div >
+                     <h2>Company name: <span id="comp_name">Melkosoft</span></h2>
+                     <div class="col-md-8">
+                        <table class="table table-user-information recruiter-info" >
+                           <tbody>
+                              <tr>
+                                 <td><label for="">Director:</label></td>
+                                 <td><input type="text" name="name" value="Bill Gates" readonly></td>
+                              </tr>
+                              <tr>
+                                 <td><label for="">Contact person:</label></td>
+                                 <td><input type="text" name="name" value="John Johnson" readonly></td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                 <td><label for="">Home Address:</label></td>
+                                 <td><input type="text" name="name" value="Metro Manila,Philippines" readonly></td>
+                              </tr>
+                              <tr>
+                                 <td><label for="">Email:</label></td>
+                                 <td><input type="text" name="name" value="info@support.com" readonly></td>
+                              </tr>
+                              <td><label for="">Phone Number:</label></td>
+                              <td><input type="text" name="name" value="123-4567-890" readonly></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="col-md-4">
+                       <img src="html/employer/logo.jpg" alt="logo" class="col-md-12">
+                       <input id="change-logo" type="button" name="name" value="Change" class="btn btn-warning col-md-6 col-md-offset-3">
+                     </div>
+                  </div>
+
+               <input type="button" name="name" value="Edit" class="btn btn-primary col-md-2 col-md-offset-4" onclick="edit()">
+               <input type="button" name="name" value="Save" class="btn btn-success col-md-2" onclick="save()">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <hgroup class="mb20">
+      <h1>My recent vacancies</h1>
+   </hgroup>
+   <section class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+      <article class="search-result row">
+         <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+            <a href="#" title="Logo" class="thumbnail"><img src="html/employer/logo.jpg" alt="CompanyLogo" /></a>
+         </div>
+         <div id="vac-text" class="col-xs-12 col-sm-12 col-md-7 excerpet">
+            <h3><a href="#" title="">Middle Java Developer</a></h3>
+
+            <p> Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems.... </p>
+            <br>
+
+         </div>
+         <div id="glyphicons" class="col-lg-2 col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+               <li><i class="glyphicon glyphicon-time"></i> <span>Posted 15 min ago</span></li>
+               <li><i class="glyphicon glyphicon-usd"></i> <span>2000</span></li>
+               <li><i class="glyphicon glyphicon-home"></i> <span>USA TX Austin</span></li>
+               <li>
+                 <div class="manage-buttons">
+                   <input type="button" name="name" value="Edit" class="btn btn-primary col-md-5">
+                   <input type="button" name="name" value="Delete" class="btn btn-danger col-md-5">
+                 </div>
+               </li>
+            </ul>
+          </div>
+         <span class="clearfix border"></span>
+      </article>
+      <article class="search-result row">
+         <div class="col-xs-12 col-sm-12 col-md-3 ">
+            <a href="#" title="Logo" class="thumbnail"><img src="html/employer/logo.jpg" alt="CompanyLogo" /></a>
+         </div>
+         <div id="vac-text" class="col-xs-12 col-sm-12 col-md-7">
+            <h3><a href="#" title="">Junior Java Developer</a></h3>
+
+            <p>Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems.....</p>
+            <br>
+
+         </div>
+         <div id="glyphicons" class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+               <li><i class="glyphicon glyphicon-time"></i> <span>Posted 45 min ago</span></li>
+               <li><i class="glyphicon glyphicon-usd"></i> <span>3000</span></li>
+               <li><i class="glyphicon glyphicon-home"></i> <span>USA TX Houston</span></li>
+               <li>
+                 <div class="manage-buttons">
+                   <input type="button" name="name" value="Edit" class="btn btn-primary col-md-5">
+                   <input type="button" name="name" value="Delete" class="btn btn-danger col-md-5">
+                 </div>
+               </li>
+            </ul>
+         </div>
+         <span class="clearfix border"></span>
+      </article>
+      <article class="search-result row">
+         <div class="col-xs-12 col-sm-12 col-md-3">
+            <a href="#" title="Logo" class="thumbnail"><img src="html/employer/logo.jpg" alt="CopmanyLogo" /></a>
+         </div>
+
+         <div id="vac-text" class="col-xs-12 col-sm-12 col-md-7">
+            <h3><a href="#" title="">Senior Java Developer</a></h3>
+
+            <p>Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems.....</p>
+            <br>
+         </div>
+         <div id="glyphicons" class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+               <li><i class="glyphicon glyphicon-time"></i> <span>Posted 2 hours ago</span></li>
+               <li><i class="glyphicon glyphicon-usd"></i> <span>5000</span></li>
+               <li><i class="glyphicon glyphicon-home"></i> <span>Ukraine Dolyna</span></li>
+               <li>
+                 <div class="manage-buttons">
+                   <input type="button" name="name" value="Edit" class="btn btn-primary col-md-5">
+                   <input type="button" name="name" value="Delete" class="btn btn-danger col-md-5">
+                 </div>
+               </li>
+            </ul>
+          </div>
+         <span class="clearfix border"></span>
+      </article>
+</div>
+<script type="text/javascript" src="html/employer/edit-controller.js">
+
+</script>

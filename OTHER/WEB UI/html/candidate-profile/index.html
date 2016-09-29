@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candidate's profile</title>
+   <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+						<link rel="stylesheet" href="html/candidate-profile/Candidate's_profile.css">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css">
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
+							<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
+</head>
+
+<body>
+	<div class="candidate_profile">
+	<div class="container">
+		<div class="col-lg-offset-6">
+			<h2 >Max Brown Shpak</h2>
+		</div>
+		<div class=" profile_picture col-lg-3 ">
+			<img src="resources/img/profile_picture.jpg" class="col-lg-12">
+			<a class="btn btn-default col-lg-10 col-lg-offset-1">Change photo</a>
+			<a class="btn btn-default col-lg-10 col-lg-offset-1" onclick="edit()">Edit profile</a>
+			<a class="btn btn-default col-lg-10 col-lg-offset-1">Upload CV</a>
+			<a class="btn btn-default col-lg-10 col-lg-offset-1">Delete CV</a>
+			<a href="#" class="fa fa-file-pdf-o col-lg-offset-5"></a>
+			<p class="col-lg-10 col-lg-offset-3"><b>CV is uploaded</b></p>
+		</div>
+		<div class="info">
+
+			<div class="contacts well">
+				<form  role="form">
+					<div class="row">
+						<div class="col-lg-7">
+				<div class="row form-group">
+				<label for="email" class="col-lg-3">email:</label>
+					<input class="col-lg-5" type="email" name="email" value="maxshpak@ukr.net" readonly>
+				</div>
+				<div class="row form-group">
+					<label for="telnum" class="col-lg-3">m-phone:</label>
+					<input class="col-lg-5" type="telnum" name="telnum" value="+3 8067 155 4553" readonly>
+				</div>
+				<div class="row form-group">
+					<label for="skype" class="col-lg-3">Skype:</label>
+					<input class="col-lg-5" type="text" name="skype" value="max.shpak" readonly>
+				</div>
+						</div>
+						<div class="col-lg-5">
+				<div class="row form-group">
+					<label for="Country" class="col-lg-3">Country:</label>
+					<input class="col-lg-5" type="text" name="Country" value="USA" readonly>
+				</div>
+				<div class="row form-group">
+					<label for="City" class="col-lg-3">City:</label>
+					<input class="col-lg-5" type="text" name="City" value="Chicago" readonly>
+				</div>
+				<div class="row form-group">
+					<label for="State" class="col-lg-3">State:</label>
+					<input class="col-lg-5" type="text" name="State" value="IL" readonly>
+				</div>
+				<div class="row form-group">
+					<label for="Zipcode" class="col-lg-3">Zipcode:</label>
+					<input class="col-lg-5" type="text" name="Zipcode" value="60617" readonly>
+				</div>
+
+			</div>
+			</div>
+			<div class="row">
+				<a href="#" class="fa fa-facebook-square col-lg-offset-2 col-lg-2"></a>
+				<a href="#" class="fa fa-linkedin-square col-lg-2"></a>
+				<a href="#" class="fa fa-vk col-lg-2"></a>
+			</div>
+			</form>
+			</div>
+			<h3>Interested in:</h3>
+			<div class="well interested">
+				<input name="tags" id="tags" readonly>
+			</div>
+			<h3>Skills:</h3>
+			<div class="well skills">
+				<form  role="form">
+					<div class="row well form-group">
+						<a href="#" class="col-lg-3 "><input type="text" value="Databases"  readonly></a>
+						<p class="col-lg-2"><input type="text" value="Basic" readonly></p>
+					</div>
+					<div class="row well form-group">
+						<a href="#" class="col-lg-3"><input type="text" value="Java" readonly></a>
+						<p class="col-lg-2"><input type="text" value="Avarage" readonly></p>
+					</div>
+					<div class="row well form-group">
+						<a href="#" class="col-lg-3 "><input type="text" value="JavaScript" readonly></a>
+						<p class="col-lg-2"><input type="text" value="Strong" readonly></p>
+					</div>
+				</form>
+			</div>
+			<h3>Education:</h3>
+			<div class="education well ">
+				<form  role="form">
+					<div class="school ">
+						<h4><b>Schools:</b></h4>
+						<ul>
+							<li>
+								<div class="form-group " ><b><input name="school" type="text" value="Houston High Greed School"size="30" readonly></b></div>
+								<div class="form-group "><label for="department" class="col-lg-3">Department: </label> <input  name="department" type="text" value="" size="30" readonly></div>
+								<div class="form-group "><label for="Specialization" class="col-lg-3">Specialization: </label><input name="Specialization" type="text" value="" size="30" readonly></div>
+								<div class="form-group "><label for="Degree" class="col-lg-3">Degree: </label><input name="Degree" type="text" value="" size="30" readonly></div>
+								<div class="form-group "><label for="Degree" class="col-lg-3">Start date: </label><input name="start-date" type="date" value="2010-07-10" class="col-lg-3" readonly></div>
+								<div class="form-group "><label for="Degree" class="col-lg-2">Finish date: </label><input type="finish-date" value="2016-09-07" class="col-lg-3" readonly></div>
+							</li>
+							<br>
+							<br>
+								<li>
+									<div class="form-group "><b><input name="school" type="text" value="Houston High Greed School"  size="60" readonly></b></div>
+									<div class="form-group "><label for="department" class="col-lg-3">Department: </label> <input  name="department" type="text" value="Math and Informatic"size="30"  readonly></div>
+									<div class="form-group "><label for="Specialization" class="col-lg-3">Specialization: </label><input name="Specialization" type="text" value="Computer Science" size="30" readonly></div>
+									<div class="form-group "><label for="Degree" class="col-lg-3">Degree: </label><input name="Degree" type="text" value="Bachelour" size="30" readonly></div>
+									<div class="form-group "><label for="Degree" class="col-lg-3">Start date: </label><input name="start-date" type="date" value="2010-07-10" class="col-lg-3" readonly></div>
+									<div class="form-group "><label for="Degree" class="col-lg-2">Finish date: </label><input type="finish-date" value="2016-09-07" class="col-lg-3" readonly></div>
+								</li>
+							</ul>
+							<a href="#" class="btn btn-default add_new_education col-lg-offset-1">Add new school</a>
+						</div>
+						<div class="trainings ">
+							<h4><b>Trainings:</b></h4>
+							<ul>
+								<li>
+									<div class="form-group "><b><input name="training-name"  type ="text" value="Capcake bakery courses" size="30" readonly></b></div>
+									<div class="form-group "><input name="start-date" type="date" value="2015-07-10" readonly></div>
+									<div class="form-group "><input name="finish-date"type="date"  value="2018-09-07" readonly></div>
+								</li>
+								<li>
+									<div class="form-group "><b><input name="training-name"  type ="text" value="Photoshop courses" size="30" readonly></b></div>
+									<div class="form-group "><input name="start-date" type="date" value="2015-07-10" readonly></div>
+									<div class="form-group "><input name="finish-date"type="date"  value="2018-09-07" readonly></div>
+								</li>
+							</ul>
+							<a href="#" class="btn btn-default add_new_education col-lg-offset-1">Add new training</a>
+						</div>
+					</form>
+				</div>
+				<h3>Work experiance:</h3>
+				<div class="work_experiance well">
+					<form  role="form">
+						<ul>
+							<li>
+								<div class="form-group"><b><label for="department">Position: </label><input name="position-name"  type ="text" value="Middle Pascal Developer" size="30" readonly></b></div>
+								<div class="form-group"><label for="department">Company: </label><input name="company-name" type="text" value="Edvantis" readonly></div>
+								<div class="form-group"><label for="department">Responsibilities: </label><input name="responsibilities" type="text" value="" readonly></div>
+								<div class="form-group"><label for="department">Start date: </label><input name="start-date" type="date" value="2015-07-10" readonly></div>
+								<div class="form-group"><label for="department">Finish date: </label><input name="finish-date"type="date"  value="2018-09-07" readonly></div>
+							</li>
+							<li>
+								<div class="form-group"><b><label for="department">Position: </label><input name="position-name" type ="text" value="Pascal Trainee" size="30" readonly></b></div>
+								<div class="form-group"><label for="department">Company: </label><input name="company-name" type="text" value="Mircosoft" readonly></div>
+								<div class="form-group"><label for="department">Responsibilities: </label><input name="responsibilities" type="text" value="" readonly></div>
+								<div class="form-group"><label for="department">Start date: </label><input name="start-date" type="date" value="2015-07-10" readonly></div>
+								<div class="form-group"><label for="department">Finish date: </label><input name="finish-date"type="date"  value="2018-09-07" readonly></div>
+							</li>
+						</ul>
+						<a href="#" class="btn btn-default add_new_experiance col-lg-offset-1">Add new experiance</a>
+					</form>
+						</div>
+						<h3>Personal information</h3>
+						<div class="personal_inf well">
+							<form  role="form">
+							<div class="form-group">	<textare row="10" cols="40" disable="disable">  I am a team player opened for new challenges. Self motivated...</textarea></div>
+								</form>
+							</div>
+							<button class="btn btn-success save col-lg-offset-10" onclick="save()">Save</button>
+						</div>
+					</div>
+				</div>
+
+				</body>
+				<script>
+					function edit(){
+						$(".candidate_profile input").attr("readonly", null);
+						$(".save").css({"visibility": "visible"});
+						$('#tags').tagsInput({"width": "auto"});
+						$('.tagsinput').tagsInput({
+							'defaultText':''
+							});
+					}
+					function save(){
+						$(".candidate_profile input").attr("readonly", "");
+						$(".save").css({"visibility": "hidden"});
+         $('.tagsinput').find('a').remove();
+				 $('.tagsinput').css({"border": "none"});
+
+
+					}
+
+				</script>
+				</html>

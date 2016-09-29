@@ -1,0 +1,75 @@
+<head>
+   <title>Workopolis Home</title>
+</head>
+<script>
+$(document).ready(function(){
+  $('#collapsible-panels div').hide();
+  $('#collapsible-panels a').click(function(e){
+    $(this).parent().next('#collapsible-panels div').slideToggle('slow');
+    $(this).parent().toggleClass('active');
+    e.preventDefault();
+  });
+});
+
+</script>
+<div class="home col-lg-12">
+   <div class="col-lg-12">
+      <p class="mainSign_1 text-center ">LET'S FIND YOUR DREAM JOB</p>
+   </div>
+   <div class="col-lg-4 col-lg-offset-4 serch_form">
+      <form>
+         <div class="form-group col-lg-6">
+            <input type="search" class="form-control" id="inputsearch" placeholder="Job title,keywords">
+         </div>
+         <div class="form-group col-lg-4">
+            <input type="search" class="form-control" id="inputsearch" placeholder="City">
+         </div>
+         <div class="col-lg-2">
+            <button type="submit" class="btn btn-success">Find</button>
+         </div>
+      </form>
+   </div>
+  <!-- <div class="panel-group">
+       <div class="panel panel-default">
+         <div class="panel-heading">
+           <h4 class="panel-title row">
+             <p class="col-lg-6">Are you an Emloyer?</p>
+             <a data-toggle="collapse" href="#collapse1" class="col-lg-2 panel_button">+</a>
+           </h4>
+         </div>
+         <div id="collapse1" class="panel-collapse collapse">
+           <div class="panel-body">Panel Body</div>
+           <div class="panel-footer">Panel Footer</div>
+         </div>
+       </div>
+     </div>-->
+
+     <div id="collapsible-panels" >
+     <h2><a href="#">Are you an Emloyer?</a><a data-toggle="collapse" href="#collapse1" class="col-lg-2 panel_button">+</a></h2>
+     <div class="collapsible-panels content"><p>Content.</p></div>
+     </div>
+<!--  <a  class="panel_button" data-toggle="collapse"  href="#collapse1" >+</a>-->
+
+
+      <!--
+        <div class="panel_button text-center">
+         <a href="#">  <p>+</p></a>
+         </div>
+       </div>
+   </div>
+ </div>
+-->
+   <div class="mainSign_2 text-center ">
+     <p>Get expert advice 24/7</p>
+   </div>
+   <div class="col-lg-2 col-lg-offset-5 contact_button">
+      <button type="submit" class="btn btn-success col-lg-12 ">Contact us</button>
+   </div>
+   <div class="reviews container-fluid">
+     <div>
+     <p>What people say about workopolis?</p>
+   </div>
+ </div>
+
+</div>
+</div>

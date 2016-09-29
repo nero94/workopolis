@@ -1,0 +1,151 @@
+<head>
+	<title>Profiles</title>
+	<link href="html/profiles/css/profiles.css" rel="stylesheet">
+
+	<script type="text/javascript" src="html/profiles/js/jquery.tablesorter.js"></script>
+	<script type="text/javascript" src="html/profiles/js/sortScript.js"></script>	
+	
+<script type="text/javascript">
+$.tablesorter.addParser({
+    // set a unique id 
+    id: 'myDateFormat',
+    is: function(s) {
+        return false;
+    },
+    format: function(s) {
+        var date = s.split('.');
+        return new Date(date[2], date[1], date[0]).getTime();
+    },
+    type: 'numeric'
+});
+
+$(function() {
+    $('table').tablesorter({
+
+        // These are detected by default,
+        // but you can change or disable them
+        headers: {
+            1: { sorter: "myDateFormat" }
+        }
+    });
+});
+</script> 
+
+</head>
+<body>
+<br>
+  
+<div align="center">
+	<label class="tableHeader">Browse Profiles</label><br>
+<div class="btn-group">
+  <button type="button" class="btn btn-default btn-lg">By Profile Type</button>
+  <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-lg"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Candidate</a></li>
+    <li><a href="#">Recruiter</a></li>
+    <li><a href="#">Manager</a></li>
+    <li><a href="#">Employer</a></li>
+    <li><a href="#">Administrator</a></li>
+  </ul>
+</div>
+<input type="submit" class="btn btn-success btn-send btn-lg" value="Show results">
+
+	<table cellpadding="10" class="sortable tablesorter" width="80%">
+			<thead>
+				<tr class="tableHeader">
+					<td>1-10 of 10</td>
+					<td colspan="4" align="center">Candidates</td>
+					<td>Next <img src="html/recruiters-information/Next-icon.png" width="20" height="20" /></td>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<th>Registration Date</th>
+					<th>Status</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+		<tbody>
+			<tr>
+				<td>Michael Johnson</td>
+				<td>20.02.2016</td>
+				<td>Unbanned</td>
+				<td width="15%"><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td width="15%"><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td width="15%"><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Joshua Williams</td>
+				<td>30.01.2016</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Matthew Jones</td>
+				<td>15.11.2015</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Emma Brown</td>
+				<td>10.10.2013</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Emily Davis</td>
+				<td>20.02.2016</td>
+				<td>Banned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Madison Miller</td>
+				<td>10.08.2015</td>
+				<td>Banned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>David Wilson</td>
+				<td>30.03.2014</td>
+				<td>Banned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Alyssa Moore</td>
+				<td>12.12.2012</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Luke Taylor</td>
+				<td>30.07.2016</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+			<tr>
+				<td>Natalie Anderson</td>
+				<td>20.09.2016</td>
+				<td>Unbanned</td>
+				<td><input type="submit" class="btn btn-warning btn-send btn-md btn-block" value="Bann"></td>
+				<td><input type="submit" class="btn btn-success btn-send btn-md btn-block" value="Unbann"></td>
+				<td><input type="submit" class="btn btn-danger btn-send btn-md btn-block" value="Delete"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>		
+</body>

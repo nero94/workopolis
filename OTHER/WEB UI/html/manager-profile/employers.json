@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "url": "html/manager-profile/ebay.png",
+    "title": "eBay",
+    "location": "USA, CA, California",
+	"president": "Pierre Omidyar"
+  },
+  {
+    "id": "2",
+    "url": "html/vacancies/microsoft.jpg",
+    "title": "Microsoft",
+    "location": "USA, NY, Clarence",
+	"president": "Bill Gates"
+  },
+  {
+    "id": "3",
+    "url": "html/vacancies/oracle.jpg",
+    "title": "Orecle",
+    "location": "USA, MN, Emerville",
+	"president": "Larry Ellison"
+  },
+  
+  {
+    "id": "4",
+    "url": "html/for-employer/images/Intel.png",
+    "title": "Intel",
+    "location": "USA, MN, Emerville",
+	"president": "Gordon Moore"
+  }
+]

@@ -1,0 +1,118 @@
+<head>
+  <title>Vacancy description</title>
+  <link rel="stylesheet" href="html/vacancy_description/vacancy-description.css">
+</head>
+
+<div class="back col-lg-12" ng-controller="VacancyController">
+	<div id="vacancy" class="container col-lg-10 col-lg-offset-1">
+		<div id="description-row" class="row">
+	         <div id="vac-head" class="col-lg-6 col-xs-12 col-sm-12 col-md-6">
+	         	<h3 id="head-text">{{vacancy.title}}</h3>
+	         </div>
+	    </div>
+	    <div id="info-row" class="row">
+		    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+	            <a href="#" title="Logo" class="thumbnail"><img src="{{vacancy.url}}" alt="CompanyLogo"/></a>
+	            <button id="apply "type="button" class="col-lg-10 col-lg-offset-1 col-md-2 col-md-offset-10 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 btn btn-success glyphicon glyphicon-ok">Apply</button>
+	        </div>
+		     <div class="info">
+		         <div class="glyphicon glyphicon-home col-lg-2">  Company:</div>
+		         <div class="text">{{vacancy.company.name}}</div>
+		         <div class="glyphicon glyphicon-map-marker col-lg-2">  Location:</div>
+		         <div class="text">{{vacancy.company.adress.country}}</div>
+		         <div class="glyphicon glyphicon-move col-lg-2">  Direction:</div>
+		         <div class="text">{{vacancy.direction}}</div>
+		         <div class="glyphicon glyphicon-time col-lg-2">  Status:</div>
+		         <div class="text">{{vacancy.status}}</div>
+		         <div class="glyphicon glyphicon-hourglass col-lg-2">  Posted:</div>
+		         <div class="text">{{vacancy.postdate}}</div>
+	         </div>
+
+		</div>
+
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>General Description:</h3>
+		    </div>
+			<div>
+				<ul>
+					<li>Do you want to challenge your professional skills and knowledge? Do you have a desire to be at the beginning of the strong IT company in Lviv?</li>
+					<li>If yes, you should definitely join Edvatis friendly team! We provide IT solutions for the international retail business. We are planning to triple our development stuff till the end of 2016, and you will be one of the key persons helping us to achieve it.</li>
+					<li>Would you like to join us and shine?</li>
+					<li>We are looking for a person with 2 years of Java Development commercial experience.</li>
+				</ul>
+			</div>
+		</div>
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>Responsibilities:</h3>
+		    </div>
+			<div>
+				<ul>
+					<li>Implementation of new functionality and improvement of existing one.</li>
+
+					<li>Analysis of AC and provide the best solution.</li>
+
+					<li>Bug fixing.</li>
+
+					<li>Covering code with unit and integration tests.</li>
+
+					<li>Code refactoring and code reviewing.</li>
+				</ul>
+			</div>
+		</div>
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>Required skills:</h3>
+		    </div>
+			<div id="skills" class="row" >
+        <div ng-repeat="skill in vacancy.required_skills">
+				<div id="skill" class="btn btn-default col-xs-2 col-sm-2 col-md-1 excerpet col-lg-1 col-offset-sm-1">{{skill}}</div>
+</div>
+      </div>
+		</div>
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>Would Be a Plus:</h3>
+		    </div>
+			<div id="skills" class="row">
+        <div ng-repeat="skill in vacancy.desired_skills">
+				<div id="skill" class="btn btn-default col-xs-2 col-sm-2 col-md-1 excerpet col-lg-1 col-offset-sm-1">{{skill}}</div>
+        </div>
+      </div>
+		</div>
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>Education Requirements:</h3>
+		    </div>
+			<div>
+				<ul>
+					<h4>Education Field:</h4>
+					<li>{{vacancy.education_field}}</li>
+					<h4>Education Degree:</h4>
+					<li>{{vacancy.education_degree}}</li>
+				</ul>
+			</div>
+		</div>
+		<div id="vac-elements" class="container">
+			<div id="start-text">
+		    	<h3>We Offer:</h3>
+		    </div>
+			<div>
+				<ul>
+					<li>Attractive salary.</li>
+
+					<li>Stablebackground of an internationalcompany.</li>
+
+					<li>Friendly young team and modernworkplace.</li>
+
+					<li>Company events and celebrations.</li>
+
+					<li>English courses for free (with certified English teachers).</li>
+
+					<li>24 days of holiday.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

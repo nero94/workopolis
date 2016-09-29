@@ -1,0 +1,20 @@
+[
+{
+  "id": 1,
+  "email": "ex@ex.ex",
+  "password": "123",
+  "acc_type": "candidate"
+},
+{
+"id": 2,
+"email": "x@x.x",
+"password": "123",
+"acc_type": "recruiter"
+},
+{
+"id": 3,
+"email": "xe@xe.xe",
+"password": "123",
+"acc_type": "employer"
+}
+]

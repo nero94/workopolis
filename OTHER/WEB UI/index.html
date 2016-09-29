@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/png" href="resources/img/favicon.png" />
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="bower_components/jquery.tagsinput/src/jquery.tagsinput.css" />
+      <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css" />
+      <!-- endbower -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/ngstorage/ngStorage.js"></script>
+      <script src="bower_components/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+      <!-- endbower -->
+      <!-- injector:css -->
+      <link rel="stylesheet" href="resources/css/contact-form.css">
+      <link rel="stylesheet" href="resources/css/home.css">
+      <link rel="stylesheet" href="resources/css/main.css">
+      <link rel="stylesheet" href="resources/css/navbar.css">
+      <link rel="stylesheet" href="resources/css/registration.css">
+      <!-- endinjector -->
+   </head>
+   <body id="main-body" ng-app="mainApp" ng-controller="SessionController">
+      <header id="header-main" class="row">
+         <div class="container logo container-logo">
+            <div class="col-lg-4 col-lg-offset-4">
+            <img src="resources\img\workopolis_1.png" class="col-lg-12">
+            </div>
+         </div>
+         <div>
+            <nav class="navbar navbar-inverse ">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar" ng-controller="NavBarController">
+                     <ul class="nav navbar-nav" id="main-nav">
+                      <li id="home"><a href="#/home">Main</a></li>
+                      <li id="candidate_profile"><a href="#/candidate-profile">My profile</a></li>
+                      <li id="recruiter_profile"><a href="#/recruiter-profile">My profile</a></li>
+                      <li id="employer"><a href="#/employer">My profile</a></li>
+                      <li id="add-vacancy"><a href="#/add-vacancy">Add vacancy</a></li>
+                      <li id="recruiter_vacancies"><a href="#/recruiters-vacancies">New vacancies</a></li>
+                      <li id="recruiter_interview"><a href="#/recruiters-interview">My interview</a></li>
+                      <li id="candidate_search"><a href="#/candidate-search">Candidates</a></li>
+                      <li id="vacancies"><a href="#/vacancies">Vacancies</a></li>
+                      <li id="schedule"><a href="#/schedule">Schedule</a></li>
+                      <li id="for_employer"><a href="#/for-employer">For Employer</a></li>
+                      <li id="about_us"><a href="#/about_us">About Us</a></li>
+                      <li id="contact_form"><a href="#/contact-form">Contact Us</a></li>
+                     </ul>
+                     <ul class="nav navbar-nav navbar-right" ng-controller="LoginController">
+                        <li><a href="#/register" id="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                        <li><a href="#/login" id="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#/home"  ng-click="submitLogout()" id="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <div id="dinamic" class="row">
+         <ng-view>
+         </ng-view>
+      </div>
+
+      <footer class="row">
+				<nav class="navbar navbar-inverse">
+					 <div class="container-fluid">
+							<div class="navbar-header">
+								 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+								 </button>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+								 <ul class="nav navbar-nav">
+										<li ><a href="#/home">Main</a></li>
+												<li><a href="#/about_us">About Us</a></li>
+										<li><a href="#/contact-form">Contact Us</a></li>
+                    <li></li>
+								 </ul>
+                 <p id="copyright">Workopolis&copy 2016.</p>
+							</div>
+					 </div>
+				</nav>
+      </footer>
+   </body>
+   <!-- injector:js -->
+   <script src="resources/js/index.js"></script>
+   <script src="resources/js/login-controller.js"></script>
+   <script src="resources/js/navbar-controller.js"></script>
+   <script src="resources/js/session-controller.js"></script>
+   <script src="resources/js/vacancies-controller.js"></script>
+   <script src="resources/js/mainPage-findButton-contr.js"></script>
+
+   <!-- endinjector -->
+</html>

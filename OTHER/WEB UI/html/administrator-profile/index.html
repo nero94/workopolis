@@ -1,0 +1,50 @@
+<head>
+    <title>Administrator Statistic</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="html/administrator-profile/jquery.pista.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="html/administrator-profile/data.js" type="text/javascript" charset="utf-8"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="html/administrator-profile/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="html/administrator-profile/css/style.css">
+  </head>
+  <body>
+  <div align="center">
+  <h1 style="margin-top:50px;">Statistic</h1>  
+  <label>General Statistic</label>
+  
+	<div class="btn-group">
+  <button type="button" class="btn btn-default btn-lg">By Period</button>
+  <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-lg"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Today</a></li>
+    <li><a href="#">Yesterday</a></li>
+    <li><a href="#">Week</a></li>
+    <li><a href="#">Month</a></li>
+    <li><a href="#">Year</a></li>
+  </ul>
+</div>
+<input type="submit" class="btn btn-success btn-send btn-lg" value="Show results">
+  </div>
+   <br>
+    <div class="content">
+    
+
+    <h5>The number of required and the number of hired employees</h5>
+    <div id="multi"></div>    
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>

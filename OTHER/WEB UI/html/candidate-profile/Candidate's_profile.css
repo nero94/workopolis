@@ -1,0 +1,90 @@
+body{
+	background-color: #F0F0F0;
+}
+.profile_picture{
+	float: left;
+}
+.profile_picture a{
+	font-weight: bold;
+}
+.profile_picture .btn{
+	margin-top:5px;
+}
+.info{
+	overflow: auto;
+}
+
+.candidate_profile{
+
+	font-family: Helvetica, sans-serif;
+background-color: #F0F0F0;
+margin-top:0;
+margin-bottom: 10px;
+}
+.candidate_profile h2,h3{
+
+	color:#000;
+	font-family: Andale Mono, monospace;
+	font-weight: 800;
+}
+.candidate_profile h3{
+	 text-transform: uppercase;
+	 }
+.candidate_profile h5{
+
+}
+.well{
+	background-color: #fff;
+	border-radius: 0;
+	box-shadow: 0 1px 1px 0 #a8acb0;
+}
+.info{
+	margin-top: 0;
+}
+
+
+.skills .well{
+background-color: #a5ecb1;
+height:50px;
+
+}
+
+.skills input[readonly] {
+	border: none;
+	background-color: #a5ecb1;
+}
+.skills input {
+
+	background-color: #fff;
+}
+.contacts a{
+	font-size: 50px;
+}
+.contacts a:hover{
+	text-decoration: none;
+}
+.add_new_education{
+	visibility: hidden;
+
+}
+.add_new_experiance{
+visibility: hidden;
+}
+.save{
+	width:110px;
+	color:#fff;
+}
+.profile_picture .fa{
+	font-size: 50px;
+	margin-top:5px;
+}
+.save{
+	visibility: hidden;
+}
+input[readonly]{
+	 border:none;
+
+ }
+ ul{
+	 list-style-type: none;
+ }

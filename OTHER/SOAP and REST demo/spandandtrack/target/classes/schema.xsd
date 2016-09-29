@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://example.com/spandandtrack"
+	targetNamespace="http://example.com/spandandtrack"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<xs:element name="getPaymentRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getPaymentResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="payment" type="tns:Payment" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="user" />
+	<xs:complexType name="User">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="email" type="xs:string" />
+			<xs:element name="password" type="xs:string" />
+			<xs:element name="accounts" type="tns:Account" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="budgetPlan" type="tns:BudgetPlan"
+				minOccurs="0" />
+			<xs:element name="userState" type="tns:UserState" />
+			<xs:element name="registerDate" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="UserState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unregistred" />
+			<xs:enumeration value="Unconfirmed" />
+			<xs:enumeration value="Confirmed" />
+			<xs:enumeration value="Logged in" />
+			<xs:enumeration value="Logged out" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="Account" abstract="true">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="amount" type="xs:double" />
+			<xs:element name="currency" type="xs:string" />
+			<xs:element name="comment" type="xs:string" minOccurs="0" />
+			<xs:element name="payment" type="tns:Payment" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="state" type="tns:AccountState" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="payment" type="tns:Payment" />
+	<xs:complexType name="Payment">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="amount" type="xs:double" />
+			<xs:element name="currency" type="tns:Currency" />
+			<xs:element name="comment" type="xs:string" minOccurs="0" />
+			<xs:element name="isRegular" type="xs:boolean" minOccurs="0" />
+			<xs:element name="paymentDate" type="xs:dateTime" />
+			<xs:element name="paymentState" type="tns:PaymentState" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Card" abstract="true">
+		<xs:sequence>
+			<xs:element name="cardNumber" type="xs:integer" />
+			<xs:element name="bankName" type="xs:string" minOccurs="0" />
+			<xs:element name="experationDate" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="cash" type="tns:Cash" />
+	<xs:complexType name="Cash">
+		<xs:complexContent>
+			<xs:extension base="tns:Account">
+				<xs:sequence>
+					<xs:element name="billNum" type="xs:integer" minOccurs="0" />
+					<xs:element name="par" type="xs:integer" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="credit" type="tns:Credit" />
+	<xs:complexType name="Credit">
+		<xs:complexContent>
+			<xs:extension base="tns:Account">
+				<xs:sequence>
+					<xs:element name="startDate" type="xs:dateTime" />
+					<xs:element name="creditTerm" type="xs:integer" />
+					<xs:element name="interestRate" type="xs:double" />
+					<xs:element name="paymentFrequency" type="xs:integer" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="deposit" type="tns:Deposit" />
+	<xs:complexType name="Deposit">
+		<xs:complexContent>
+			<xs:extension base="tns:Account">
+				<xs:sequence>
+					<xs:element name="startDate" type="xs:dateTime" />
+					<xs:element name="depositTerm" type="xs:integer" />
+					<xs:element name="interestRate" type="xs:double" />
+					<xs:element name="withdrawAbility" type="xs:boolean" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="AccountState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Active" />
+			<xs:enumeration value="Frozen" />
+			<xs:enumeration value="Locked" />
+			<xs:enumeration value="Inactive" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Currency">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="USD" />
+			<xs:enumeration value="EUR" />
+			<xs:enumeration value="UAH" />
+			<xs:enumeration value="GBR" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="transfer" type="tns:Transfer" />
+	<xs:complexType name="Transfer">
+		<xs:complexContent>
+			<xs:extension base="tns:Payment">
+				<xs:sequence>
+					<xs:element name="finishDate" type="xs:dateTime" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="income" type="tns:Income" />
+	<xs:complexType name="Income">
+		<xs:complexContent>
+			<xs:extension base="tns:Payment">
+				<xs:sequence>
+					<xs:element name="category" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="outgoings" type="tns:Outgoings" />
+	<xs:complexType name="Outgoings">
+		<xs:complexContent>
+			<xs:extension base="tns:Payment">
+				<xs:sequence>
+					<xs:element name="category" type="tns:ExpensesCategory" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="PaymentState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="New" />
+			<xs:enumeration value="Approved" />
+			<xs:enumeration value="Completed" />
+			<xs:enumeration value="Canceled" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ExpensesCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Cat1" />
+			<xs:enumeration value="Cat2" />
+			<xs:enumeration value="Cat3" />
+			<xs:enumeration value="Cat4" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="budgetPlan" type="tns:BudgetPlan" />
+	<xs:complexType name="BudgetPlan">
+		<xs:sequence>
+			<xs:element name="amountDistribution" type="tns:AmountDistribution" />
+			<xs:element name="currency" type="tns:Currency" />
+			<xs:element name="startDate" type="xs:dateTime" />
+			<xs:element name="finishDate" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AmountDistribution">
+		<xs:sequence>
+			<xs:element name="expenceCategory" type="xs:string" />
+			<xs:element name="amount" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="sceduleItem" type="tns:SceduleItem" />
+	<xs:complexType name="SceduleItem">
+		<xs:sequence>
+			<xs:element name="startDate" type="xs:dateTime" />
+			<xs:element name="repeatFactor" type="xs:integer" />
+			<xs:element name="numOfIterations" type="xs:integer" />
+			<xs:element name="regularPayment" type="tns:Payment" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

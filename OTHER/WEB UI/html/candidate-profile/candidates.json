@@ -1,0 +1,14 @@
+"education": [
+  {
+    "university": {
+      "name": "Lviv Polytechtic",
+      "address": {"country": "Ukraine", "city": "Lviv", "street": "Bandery", "zip": 228228}
+    },
+    "education_degree": "Bachelor",
+    "education_field": "Technology",
+    "start_date": "2012-04-23",
+    "finish_date": "2016-04-23",
+    "departament": "Computer Technology",
+    "speciality": "System Analysis"
+  }
+],

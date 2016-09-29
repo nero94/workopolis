@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<user
+	xmlns="http://example.com/spandandtrack"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.com/spandandtrack schema.xsd">
+  <id>1</id>
+  <name>user1</name>
+  <email>sbdy@some.com</email>
+  <password>qwery</password>
+  <cash>
+    <name>Savings for travel</name>
+    <amount>100</amount>
+    <currency>USD</currency>
+    <comment>no comments</comment>
+    <state>Active</state>
+  </cash>
+  <budgetPlan>
+    <amountDistribution>
+      <expenceCategory>fun</expenceCategory>
+      <amount>100.00</amount>
+    </amountDistribution>
+    <currency>USD</currency>
+    <startDate>2016-10-31T23:59:00</startDate>
+    <finishDate>2016-12-31T23:59:00</finishDate>
+  </budgetPlan>
+  <userState>Confirmed</userState>
+  <registerDate>2016-12-31T23:59:00</registerDate>
+</user>

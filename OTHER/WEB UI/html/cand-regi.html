@@ -1,0 +1,21 @@
+
+	<link rel="stylesheet" href="resources/css/registration.css">
+
+
+
+ <div id="registraion" class="container">
+    <div class="col-md-6 col-md-offset-3">
+    <div id="logbox">
+      <form id="signup" method="post" action="/signup">
+        <h1 id="regi-head" >Create an account</h1>
+        <input name="user[name]" type="text" placeholder="What's your username?" pattern="^[\w]{3,16}$" autofocus="autofocus" required="required" class="input pass regi-input"/>
+        <input name="user[password]" type="password" placeholder="Choose a password" required="required" class="input pass regi-input"/>
+        <input name="user[password2]" type="password" placeholder="Confirm password" required="required" class="input pass regi-input"/>
+        <input name="user[email]" type="email" placeholder="Email address" class="input pass regi-input"/>
+        <input type="submit" value="Register me!" class="inputButton"/>
+        <div class="text-center">
+            already have an account? <a href="#/login" id="login_id">login</a>
+        </div>
+      </form>
+    </div>
+   </div>

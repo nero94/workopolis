@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="resources/css/registration.css">
+
+</script>
+   <div class="col-md-6 col-md-offset-3">
+    <div id="logbox">
+      <form id="signup" ng-controller="LoginController" ng-submit="submitLogin()">
+        <h1 id="regi-head">Account login</h1>
+        <input name="user[email]" ng-model="email" type="email" placeholder="enter your email" class="input pass regi-input"/>
+        <input name="user[password]" ng-model="password" type="password" placeholder="enter your password" required="required" class="input pass regi-input"/>
+        <input type="submit" value="Log me in!" class="inputButton"/>
+        <div class="text-center"">
+                    <a href="#/register" id="">create an account</a> - <a href="#/forgot" id="">forgot password</a>
+                </div>
+      </form>
+    </div>
+    </div>
+  </div>

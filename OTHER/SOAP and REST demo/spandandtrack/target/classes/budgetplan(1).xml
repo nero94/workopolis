@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<budgetPlan
+	xmlns="http://example.com/spandandtrack"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://example.com/spandandtrack schema.xsd">
+  <amountDistribution>
+    <expenceCategory>fun</expenceCategory>
+    <amount>100.00</amount>
+  </amountDistribution>
+  <currency>USD</currency>
+  <startDate>2016-10-31T23:59:00</startDate>
+  <finishDate>2016-12-31T23:59:00</finishDate>
+</budgetPlan>

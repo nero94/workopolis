@@ -1,0 +1,44 @@
+.join_us {
+font-family: Pompadur;
+}
+
+.icon{
+	margin: 6%;
+}
+
+
+
+#carousel {
+	margin-top: -15px;
+}
+#carousel div {
+	text-align: center;
+	width: 200px;
+	height: 100px;
+	float: left;
+	position: relative;
+}
+#carousel div img {
+	border: none;
+}
+
+
+#donate-spacer {
+	height: 100%;
+}
+#donate {
+	width: 750px;
+	padding: 50px 75px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#donate p, #donate form {
+	margin: 0;
+	float: left;
+}
+#donate p {
+	width: 650px;
+}
+#donate form {
+	width: 100px;
+}

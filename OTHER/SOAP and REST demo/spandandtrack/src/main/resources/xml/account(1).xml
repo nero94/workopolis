@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<cash 
+	 xmlns="http://example.com/spandandtrack"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://example.com/spandandtrack schema.xsd">
+  <name>Savings for travel</name>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <comment>no comments</comment>
+  <payment>
+  	<id>222</id>
+    <amount>12.00</amount>
+    <currency>UAH</currency>
+    <comment>test comment</comment>
+    <isRegular>true</isRegular>
+    <paymentDate>2016-12-31T23:59:00</paymentDate>
+    <paymentState>New</paymentState>
+  </payment>
+  <state>Active</state>
+</cash>

@@ -1,0 +1,223 @@
+<link rel="stylesheet" href="html/interviewer-profile/interviewer-profile.css">
+
+<div id="add-vac-container" class="container">
+  <div class="interv-info well col-lg-12">
+    <div id="int-info-head" class="well col-lg-12 row">
+      <h3 id="my-int" class="int-name">Create a Vacancy</h3>
+    </div>
+    <div class="col-lg-12 intervs well">
+      <table class="table table-striped table-responsive">
+        <thead>
+          <th>Direction</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th>Salary</th>
+        </thead>
+        <tbody>
+          <td><select class="form-control">
+                <option>Administration</option>
+                <option>Design</option>
+                <option>For Freelancers</option>
+                <option>Project Management</option>
+                <option>Software Development</option>
+                <option>System Architecture</option>
+                <option>Databases</option>
+                <option>Quality Control</option>
+                <option>...</option></td>
+          <td><input class="add-input" type="text"></td>
+          <td><select class="form-control">
+                <option>Full-Time</option>
+                <option>Part-Time</option>
+          <td><input class="add-input"  type="text"></td>
+        </tbody>
+      </table>
+      <table class="table table-striped table-responsive">
+        <thead>
+          <th><h3>General Description</h3></th>
+        </thead>
+        <tbody>
+          <td><textarea id="tworows" class="col-lg-12"></textarea></td>
+        </tbody>
+        <thead>
+          <th><h3>Responsibilities</h3></th>
+        </thead>
+        <tbody>
+          <td><textarea id="tworows1" class="col-lg-12"></textarea></td>
+        </tbody>
+        <thead>
+          <th><h3>Required Skills</h3></th>
+        </thead>
+        <tbody>
+          <td><input name="tags" id="tags1" value="" class="col-lg-12"/></td>
+        </tbody>
+        <thead>
+          <th><h3>Would be a Plus</h3></th>
+        </thead>
+        <tbody>
+          <td><input name="tags" id="tags2" value="" class="col-lg-12"/></td>
+        </tbody>
+        <thead>
+          <th><h3>Education Requirements</h3></th>
+        </thead>
+        <tbody>
+          <table class="table table-striped table-responsive">
+          <thead>
+            <th><h4>Education Field</h4></th>
+            <th><h4>Education Degree</h4></th>
+          </thead>
+          <tbody>
+            <td><select class="form-control">
+                <option>Automotation and machine constructing</option>
+                <option>Electronics and Telecommunications</option>
+                <option>System analysis</option>
+                <option>Computer Science</option>
+                <option>Software Engineering</option>
+                <option>System Architecture</option>
+                <option>Project management</option>
+                <option>System programming</option>
+                <option>Metrology and Measuring Equipment</option>
+                <option>Information Technology</option>
+                <option>Information and communication systems security</option>
+                <option>Information Security Management</option>
+                <option>Quality, Standardization and Certification</option>
+                <option>Applied Mathematics</option>
+                <option>Applied Physics</option>
+                <option>Mathematical and computer modeling</option>
+            </td>
+            <td><select class="form-control">
+                <option>Bachelour</option>
+                <option>Master</option>
+                <option>PhD</option>
+            </td>
+          </tbody>
+          </table>
+        </tbody>
+        <thead>
+          <th><h3>We offer</h3></th>
+        </thead>
+        <tbody>
+          <td><textarea id="tworows2" class="col-lg-12"></textarea></td>
+        </tbody>
+      </table>
+
+
+      <input id="submit-result" type="button" value="Save and Post" onclick="submit()">
+      </div>
+    </div>
+</div>
+<script>
+    function submit(){
+      $("#main-container input").attr("readonly", "");
+    }
+// <!-- Function for Making rows in tex areas -->
+      var element1 = document.getElementById('tworows');
+      var element2 = document.getElementById('tworows1');
+      var element3 = document.getElementById('tworows2');
+
+
+          make2Lines(element1);
+          makeMLines(element2);
+          makeOfferLines(element3);
+
+function make2Lines(el){
+
+  el.setAttribute('rows', 4); // limit height to 2 rows
+  // el.setAttribute('wrap', 'off'); // ensure no softwrap is not required anymore if we limit the length
+  el.addEventListener('keydown', limit); // add listener everytime a key is pressed
+
+  function limit(e){
+    if(e.keyCode == 13 && this.value.indexOf('\n')>-1){
+      // 13 is the ENTER key and \n is the value it make in the textarea
+      // so if we already have a line break and it's the ENTER key, we prevent it
+
+    }
+
+    // async to let the dom update before changin the value
+    setTimeout(limitRow.bind(this), 0);
+  }
+
+  function limitRow(){
+    var maxLength = 200;
+    var rows = this.value.split('\n');
+    rows.forEach(cutOverflow)
+    this.value = rows.join('\n');
+
+    function cutOverflow(row, index, rows) {
+      rows[index] = row.substring(0, maxLength);
+      // this if is only if you want to automatically jump to the next line
+      if (index === 0 && row.length > maxLength)
+        rows[1] = row.substring(maxLength) + (rows[1] || '');
+    }
+  }
+}
+function makeMLines(el){
+
+  el.setAttribute('rows', 4); // limit height to 2 rows
+  // el.setAttribute('wrap', 'off'); // ensure no softwrap is not required anymore if we limit the length
+  el.addEventListener('keydown', limit); // add listener everytime a key is pressed
+
+  function limit(e){
+    if(e.keyCode == 13 && this.value.indexOf('\n')>-1){
+      // 13 is the ENTER key and \n is the value it make in the textarea
+      // so if we already have a line break and it's the ENTER key, we prevent it
+
+    }
+
+    // async to let the dom update before changin the value
+    setTimeout(limitRow.bind(this), 0);
+  }
+
+  function limitRow(){
+    var maxLength = 200;
+    var rows = this.value.split('\n');
+    rows.forEach(cutOverflow)
+    this.value = rows.join('\n');
+
+    function cutOverflow(row, index, rows) {
+      rows[index] = row.substring(0, maxLength);
+      // this if is only if you want to automatically jump to the next line
+      if (index === 0 && row.length > maxLength)
+        rows[1] = row.substring(maxLength) + (rows[1] || '');
+    }
+  }
+}
+function makeOfferLines(el){
+
+  el.setAttribute('rows', 4); // limit height to 2 rows
+  // el.setAttribute('wrap', 'off'); // ensure no softwrap is not required anymore if we limit the length
+  el.addEventListener('keydown', limit); // add listener everytime a key is pressed
+
+  function limit(e){
+    if(e.keyCode == 13 && this.value.indexOf('\n')>-1){
+      // 13 is the ENTER key and \n is the value it make in the textarea
+      // so if we already have a line break and it's the ENTER key, we prevent it
+
+    }
+
+    // async to let the dom update before changin the value
+    setTimeout(limitRow.bind(this), 0);
+  }
+
+  function limitRow(){
+    var maxLength = 200;
+    var rows = this.value.split('\n');
+    rows.forEach(cutOverflow)
+    this.value = rows.join('\n');
+
+    function cutOverflow(row, index, rows) {
+      rows[index] = row.substring(0, maxLength);
+      // this if is only if you want to automatically jump to the next line
+      if (index === 0 && row.length > maxLength)
+        rows[1] = row.substring(maxLength) + (rows[1] || '');
+    }
+  }
+}
+
+// <!-- Function for Tags handling -->
+  $('#tags1').tagsInput({width:'auto'});
+  $('#tags2').tagsInput({width:'auto'});
+// Submit Result
+function submit(){
+      $("#add-vac-container input").attr("readonly", "");
+    }
+</script>

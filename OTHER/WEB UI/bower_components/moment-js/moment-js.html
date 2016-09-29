@@ -1,0 +1,252 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="./moment-import.html">
+
+<!--
+A Polymer element to parse, validate, manipulate, and display dates using Moment.js.
+
+Example:
+
+    <moment-js
+      format="YYYY-MM-DD HH:mm:ss"></moment-js>
+
+Example:
+
+    <moment-js
+      date="2016-01-10 14:30"
+      date-format="YYYY-MM-DD HH:mm"
+      format="LLLL"></moment-js>
+
+Example:
+
+    <moment-js
+      date="2016-01-10 14:30"
+      date-format="YYYY-MM-DD HH:mm"
+      format="LLLL"
+      formatted-date="{{myDate}}"
+      hide></moment-js>
+
+Example:
+
+    <moment-js
+      date="19:33"
+      date-format="HH:mm"
+      start-of="hour"></moment-js>
+
+Example:
+
+    <moment-js
+      date="23:30"
+      date-format="HH:mm"
+      from-now></moment-js>
+
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="moment-js">
+  <template>
+    <span hidden$="[[hide]]">[[output]]</span>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'moment-js',
+
+      properties: {
+        /**
+         * Date parameter
+         */
+        date: {
+          type: String
+        },
+
+        /**
+         * Format for parsing the date parameter.
+         */
+        dateFormat: {
+          type: String
+        },
+
+        /**
+         * Format for setting the formattedDate.
+         */
+        format: {
+          type: String,
+          value: moment.defaultFormat
+        },
+
+        /**
+         * Output formatted date.
+         */
+        formattedDate: {
+          type: String,
+          readOnly: true,
+          notify: true
+        },
+
+        /**
+         * Moment object of formatted date.
+         */
+        formattedDateMoment: {
+          type: String,
+          readOnly: true,
+          notify: true
+        },
+
+        /**
+         * Enable UTC Mode.
+         */
+        utc: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
+         * Hide showing the output.
+         */
+        hide: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
+         * Set True if date is valid.
+         */
+        isValid: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
+         * Mutates the original moment by setting it to the start of a unit of time.
+         */
+        startOf: {
+          type: String,
+          observer: '_startOfChanged'
+        },
+
+        /**
+         * Mutates the original moment by setting it to the end of a unit of time.
+         */
+        endOf: {
+          type: String,
+          observer: '_endOfChanged'
+        },
+
+        /**
+         * Relative time output. e.g. a day ago, in 4 years.
+         */
+        relativeTime: {
+          type: String,
+          readOnly: true,
+          notify: true
+        },
+
+        /**
+         * Calculate relativeTime from now.
+         */
+        fromNow: {
+          type: Boolean,
+          observer: '_fromNowChanged'
+        },
+
+        /**
+         * Calculate relativeTime to now.
+         * This is similar to fromNow, but gives the opposite interval: fromNow() = - toNow().
+         */
+        toNow: {
+          type: Boolean,
+          observer: '_toNowChanged'
+        },
+
+        /**
+         * Output result to display.
+         * It could be date time or relative time.
+         */
+        output: {
+          type: String,
+          readOnly: true,
+          notify: true
+        }
+      },
+
+      observers: [
+        '_checkAndSetIfDateIsNumber(date)',
+        '_updateIsValid(date)',
+        '_updateIsValid(dateFormat)',
+        '_updateFormattedDateMoment(date)',
+        '_updateFormattedDateMoment(dateFormat)',
+        '_updateFormattedDateMoment(utc)',
+        '_updateFormattedDate(format)'
+      ],
+
+      _checkAndSetIfDateIsNumber: function (newVal) {
+        if (!isNaN(newVal)) {
+          this.set('date', Number(this.date));
+        }
+      },
+
+      _updateFormattedDateMoment: function () {
+        if (typeof this.dateFormat === 'undefined') {
+          if (this.utc) {
+            this._setFormattedDateMoment(moment.utc(this.date));
+          } else {
+            this._setFormattedDateMoment(moment(this.date));
+          }
+        } else {
+          if (this.utc) {
+            this._setFormattedDateMoment(moment.utc(this.date, this.dateFormat));
+          } else {
+            this._setFormattedDateMoment(moment(this.date, this.dateFormat));
+          }
+        }
+
+        this._updateFormattedDate();
+      },
+
+      _updateFormattedDate: function () {
+        if (this.formattedDateMoment) {
+          this._setFormattedDate(this.formattedDateMoment.format(this.format));
+          this._setOutput(this.formattedDate);
+        }
+      },
+
+      _updateIsValid: function () {
+        if (typeof this.dateFormat === 'undefined') {
+          /**
+           * Moment will show a warning for invalid dates. e.g. 14:30.
+           * The warning will be removed in next major version of moment.
+           */
+          this.set('isValid', moment(this.date).isValid());
+        } else {
+          this.set('isValid', moment(this.date, this.dateFormat).isValid());
+        }
+      },
+
+      _startOfChanged: function () {
+        this._setFormattedDateMoment(this.formattedDateMoment.startOf(this.startOf));
+        this._updateFormattedDate();
+      },
+
+      _endOfChanged: function () {
+        this._setFormattedDateMoment(this.formattedDateMoment.endOf(this.endOf));
+        this._updateFormattedDate();
+      },
+
+      _fromNowChanged: function () {
+        if (this.fromNow) {
+          this._setRelativeTime(this.formattedDateMoment.fromNow());
+          this._setOutput(this.relativeTime);
+        }
+      },
+
+      _toNowChanged: function () {
+        if (this.toNow) {
+          this._setRelativeTime(this.formattedDateMoment.toNow());
+          this._setOutput(this.relativeTime);
+        }
+      }
+    });
+  </script>
+</dom-module>

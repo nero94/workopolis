@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="html/schedule/schedule.css">
+
+<div class="container">
+	<div class="container schedule-container">
+			<div id='calendar'></div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '2016-06-12',
+			businessHours: true, // display business hours
+			editable: true,// put your options and callbacks here
+			events: [
+        {
+            title: 'Event1',
+            start: '2016-08-02'
+        },
+        {
+            title: 'Event2',
+            start: '2016-08-03'
+        }
+        // etc...
+    ]
+    })
+
+});
+</script>

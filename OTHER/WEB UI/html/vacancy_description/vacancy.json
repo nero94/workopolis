@@ -1,0 +1,62 @@
+[
+{
+  "id": 1,
+  "url": "html/vacancies/Edvantis.png",
+  "title": "Middle Java Developer",
+  "company": {"name": "Edvantis",
+    "adress": {"country": "Ukraine", "sity": "Lviv"}
+  },
+  "direction": "Software development",
+  "status": "Full-Time",
+  "description": "Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+  "responsibilities": "Implementation of new functionality and improvement of existing one. Analysis of AC and provide the best solution.Bug fixing.Covering code with unit and integration tests. Code refactoring and code reviewing.",
+  "required_skills": ["Java EE", "SQL", "Spring", "OOP", "Alghorithms", "Hibernate"],
+  "desired_skills": ["JavaScript", "AngularJS"],
+  "postdate": "Posted 15 min ago",
+  "salary": 2000,
+  "location": "USA TX Austin",
+  "education_degree": "Master",
+  "education_field": "Technology",
+  "accommodation": "Attractive salary. Stablebackground of an internationalcompany. Friendly young team and modernworkplace. Company events and celebrations. English courses for free (with certified English teachers). 24 days of holiday."
+},
+{
+  "id": 2,
+  "url": "html/vacancies/microsoft.jpg",
+  "title": "Junior Java Developer",
+  "company": {"name": "Microsoft",
+    "adress": {"country": "USA", "sity": "Redmond"}
+  },
+  "direction": "Software development",
+  "status": "Full-Time",
+  "description": "Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+  "responsibilities": "Implementation of new functionality and improvement of existing one. Analysis of AC and provide the best solution.Bug fixing.Covering code with unit and integration tests. Code refactoring and code reviewing.",
+  "required_skills": ["Java SE", "SQL", "Struts", "OOP", "Alghorithms", "JDBC"],
+  "desired_skills": ["JavaScript", "Scrum"],
+  "postdate": "Posted 25 min ago",
+  "salary": 1000,
+  "location": "USA Redmond",
+  "education_degree": "Bachelor",
+  "education_field": "Technology",
+  "accommodation": "Attractive salary. Your personal Career Advisor & individual career map"
+},
+{
+  "id": 3,
+  "url": "html/vacancies/oracle.jpg",
+  "title": "Senior Java Developer",
+  "company": {"name": "Oracle",
+    "adress": {"country": "USA", "sity": "Redmond"}
+  },
+  "direction": "Software development",
+  "status": "Full-Time",
+  "description": "Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+  "responsibilities": "Implementation of new functionality and improvement of existing one. Analysis of AC and provide the best solution.Bug fixing.Covering code with unit and integration tests. Code refactoring and code reviewing.",
+  "required_skills": ["Java SE", "Java EE", "SQL", "Struts", "OOP", "Alghorithms", "JDBC", "Hibernate", "Design patterns", "Spring", "JavaScript"],
+  "desired_skills": ["Scrum", "Hybris", "JMS"],
+  "postdate": "Posted 40 min ago",
+  "salary": 3000,
+  "location": "USA Redmond",
+  "education_degree": "Master",
+  "education_field": "Technology",
+  "accommodation": "Typical physical demands – lifting up to 30 pounds. Attractive salary. Your personal Career Advisor & individual career map. Free tea"
+}
+]

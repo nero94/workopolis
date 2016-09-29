@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+	margin: 1%;
+	font-family: Pompadur;
+	font-size: 13pt;
+	 
+	background-color: white;
+}
+
+.tableHeader {
+	font-size: 15pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+}
+
+
+table, th, td {
+    border: 1px solid grey;
+    text-align: center;
+    text-shadow: 20;
+    padding: 6px;
+}
+
+
+ body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+ul.current-rating {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.current-rating div {
+    display: inline-block;
+    height: 24px;
+}
+
+ul.current-rating div.label {
+    width: 60px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+th { cursor: pointer; }

@@ -1,0 +1,24 @@
+{
+  "name": "workopolis",
+  "version": "0.0.1",
+  "description": "recruitment agency ui",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vasyl Dmytriv",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower": "^0.21.2",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-bower-install": "^1.6.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-injector": "^1.0.1",
+    "grunt-link-html": "^0.1.2",
+    "grunt-wiredep": "^3.0.1",
+    "jshint": "^2.9.2"
+  }
+}
