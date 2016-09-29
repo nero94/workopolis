@@ -1,0 +1,20 @@
+.delete-int-knowledge,
+.add-int-knowledge { 
+  width: 5%;
+  height: 32px;
+  color: white;
+  background-color: #66b53e;
+  border: 9px;
+  border-color: #757575;
+}
+.delete-int-knowledge {
+background-color: #d61f1f;
+}
+
+ .hidden-visibility{
+  visibility: hidden;
+}
+
+.shown-visibility{
+  visibility: visible;
+}

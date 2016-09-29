@@ -1,0 +1,182 @@
+/*.back {
+	background: url('back.jpg');
+	padding-top: 20px;
+}*/
+
+#vacancy {
+	background-color: #ececec;
+	border-radius: 5px;
+	padding: 10px;
+	border-color: #000000;
+	border-width: 2px;
+	font-family: arial, sans-serif;
+}
+
+
+.col-md-3 {
+    width: 25%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+h3{
+font-family: arial, sans-serif;
+	text-align: center;
+}
+
+h4{
+	display: inline;
+
+}
+
+.panel{
+	margin-bottom: 0;
+}
+
+#head-text {
+	font-family: arial, sans-serif;
+	margin-bottom: 20px;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+#vac-elements {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	width: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+#technical .panel-heading{
+	font-family: "Comic Sans MS Cursive";
+	font-size: 1.5em;
+	text-align: center;
+	padding: 0;
+}
+
+#technical .panel-body{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-top: 0;
+	font-family: "Consolas";
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+#technical .panel-footer{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-top: 0;
+	font-family: "Consolas";
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.category2 .panel-heading{
+	padding: 0;
+	font-family: "Comic Sans MS Cursive";
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.category2 .panel-body{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-top: 0;
+	font-family: "Consolas";
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.category2 .panel-footer{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-top: 0;
+	font-family: "Consolas";
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+#skills {
+	margin: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+}
+
+table.technical-table{
+text-align: left;
+border-spacing: 10px 10px;
+border-collapse: separate;
+}
+
+.panel{
+	border-collapse: collapse;
+}
+
+.category2{
+	display: block;
+}
+
+#skills . skill .panel-heading{
+	padding: 0;
+}
+
+#skills . skill .panel-body{
+	padding: 0;
+}
+
+#skills . skill .panel-footer{
+	padding: 0;
+}
+
+.skill{
+	margin: 5px;
+	display: inline-block;
+}
+.info {
+	font-size: 20px;
+	margin-top: 125px;
+}
+#apply {
+	padding: 20px;
+	margin-left: 150px;
+}
+
+#education_field, #education_degree{
+	margin-bottom: 10px;
+}
+#education_degree span{
+	margin-left: 15px;
+	font-family: serif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#education_field span{
+	margin-left: 15px;
+	font-family: serif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.lot_of_text{
+	font-size: 1.15em;
+}
+#company-logo{
+	max-height: 200px;
+	max-width: 200px;
+}
+.glyphicon{
+	margin-right: 5px;
+}
+.applied{
+	color:grey;
+}

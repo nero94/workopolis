@@ -1,0 +1,50 @@
+#employer_profile #comp_name {
+  color:#228B22;
+}
+#employer_profile h2 {
+  text-align: center;
+}
+#employer_profile .recruiter-info {
+  margin-top: 15px;
+}
+#employer_profile .btn-success{
+  margin-left: 5px;
+}
+
+#employer_profile  label, input {
+  display: block;
+}
+#employer_profile label {
+  margin-top: 5px;
+}
+#employer_profile h1 {
+  text-align: center;
+}
+#employer_profile .manage-buttons {
+  margin-top: 30px;
+}
+#employer_profile {
+  margin-bottom: 50px;
+}
+#employer_profile input[readonly] {
+  border: none;
+}
+#change-logo{
+  display: none;
+}
+
+div.pager span.active {
+    background:#dddddd
+
+}
+div.pager span{
+  padding:10px;
+  font-size: 20px;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+
+}
+div.pager{
+    float:right;
+margin:0;
+}

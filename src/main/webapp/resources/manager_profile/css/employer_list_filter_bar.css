@@ -1,0 +1,62 @@
+/*.employer_list table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+
+.employer_list td, .employer_list th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
+.employer_list tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.employer_list th {
+    background-color: #dddddd;
+}*/
+
+.employer_list td, .employer_list th {
+    border: 2px solid #dfdfdf;
+    text-align: left;
+    padding: 8px;
+
+}
+#table_head{
+  border-top:2px solid #dfdfdf;
+
+}
+.employer_list .tablesorter-default tr:nth-child(even) td {
+  background-color:#f0f6e9;
+  font-size: 15px;
+}
+.employer_list .tablesorter-default tr:nth-child(odd) td {
+  background-color: #e6eae1;
+  font-size: 15px;
+}
+
+.employer_list .tablesorter-default tr:hover td{
+    background-color: #eff2e9
+}
+.employer_list{
+  margin-top: 10px;
+}
+div.pager span.active {
+    background:#dddddd;
+}
+div.pager span{
+  padding:10px;
+  font-size: 20px;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+}
+div.pager{
+  float:right;
+}
+.navbar-nav > li > a {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

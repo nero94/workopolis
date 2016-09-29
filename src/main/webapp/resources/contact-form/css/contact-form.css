@@ -1,0 +1,20 @@
+#contact-form body {
+    font-family: 'Lato', sans-serif;
+}
+#contact-form h1 {
+    margin-bottom: 40px;
+}
+#contact-form label {
+    color: #222;
+}
+#contact-form .btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    
+}
+
+#contact-form .btn.disabled{
+	cursor:pointer!important;
+}

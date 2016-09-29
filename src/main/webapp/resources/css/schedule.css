@@ -1,0 +1,57 @@
+.schedule-container {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.modal-dialog{
+		margin: 250px auto!important;
+	}
+
+	.interview-modal-dialog{
+	 font-size: 24px;
+	 padding-left: 30px;
+	}
+
+	#vacancyTitleModal{
+		font-size: 30px;
+		text-align: center;
+
+	}
+
+	.modal-off-content,
+	.modal-content{
+		background-image: url(../img/backg.png);
+	}
+
+	#for-background-img{
+		background-image: url(../img/backg.png);
+	}
+
+	#calendar{
+		background-color: #FFFFFF;
+	}
+
+.fc-time{
+   display : none;
+}
+
+.fc-content{
+	cursor:pointer;
+}
+
+.interv-exampl{
+	background-color: #27a0c9!important;
+	padding: 12px!important;
+}
+
+.offer-exampl{
+	background-color: #30c36b!important;
+	padding: 12px!important;	
+}

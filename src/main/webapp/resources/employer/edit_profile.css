@@ -1,0 +1,22 @@
+#change-logo{
+  display: block;
+  margin: 0 auto;
+}
+#company-logo{
+  margin: 10px auto;
+  display: block;
+  max-height:300px;
+  max-width: 350px;
+  border: 1px solid #DCDCDC;
+}
+.btn-success{
+  display: block;
+  margin: 0 auto !important;
+}
+#edit-profile-body{
+  margin-top: 10px;
+}
+
+#edit_photo_block{
+  border: 1px solid #DCDCDC;
+}

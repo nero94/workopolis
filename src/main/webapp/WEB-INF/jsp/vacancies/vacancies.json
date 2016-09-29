@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "url": "html/vacancies/Edvantis.png",
+    "title": "Middle Java Developer",
+    "direction": "Software Development",
+    "description": "Advanced knowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+    "postdate": "Posted 15 min ago",
+    "salary": 2000,
+    "location": "USA TX Austin"
+  },
+  {
+    "id": 2,
+    "url": "html/vacancies/microsoft.jpg",
+    "title": "Junior Java Developer",
+    "direction": "Software Development",
+    "description": "Advanced uryrknowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+    "postdate": "Posted 45 min ago",
+    "salary": 3000,
+    "location": "USA TX Houston"
+  },
+  {
+    "id": 3,
+    "url": "html/vacancies/oracle.jpg",
+    "title": "Senior Java Developer",
+    "direction": "Project Management",
+    "description": "Advanced uryrknowledge Java development required. Understands concepts of large scale development across multiple interfacing systems....",
+    "postdate": "Posted 2 hours ago",
+    "salary": 5000,
+    "location": "Ukraine Dolyna"
+  }
+]

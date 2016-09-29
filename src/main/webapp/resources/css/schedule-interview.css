@@ -1,0 +1,22 @@
+
+
+
+#check-cand-email{
+
+height: 33px;
+display: block;
+color: white;
+background-color: #66b53e;
+border: 9px;
+border-color: #757575;
+}
+
+.submit-result {
+  visibility: hidden;
+
+}
+
+
+.shown-visibility{
+  visibility: visible;
+}

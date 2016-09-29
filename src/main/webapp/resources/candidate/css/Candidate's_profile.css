@@ -1,0 +1,201 @@
+body{
+	background-image: url('../../img/backg.png');
+}
+
+.set-width{
+	width: 32.1%;
+	padding-left: 15px!important;
+}
+.profile_picture{
+
+}
+.profile_picture a{
+	font-weight: bold;
+}
+.profile_picture .btn{
+	margin-top:5px;
+}
+.name{
+
+}
+.name input{
+
+	font-family: Andale Mono, monospace;
+}
+.name input[readonly]{
+	border: none;
+}
+
+.info{
+	overflow: auto;
+	margin-top: 0;
+}
+
+.candidate_profile{
+
+	font-family: Helvetica, sans-serif;
+
+margin-top:0;
+margin-bottom: 10px;
+}
+.candidate_profile h2,h3{
+
+	color:#000;
+	font-family: Andale Mono, monospace;
+	font-weight: 800;
+}
+.candidate_profile h3{
+	 text-transform: uppercase;
+	 }
+.candidate_profile h5{
+
+}
+.well{
+	background-color: #fff;
+	border-radius: 0;
+	box-shadow: 0 1px 1px 0 #a8acb0;
+}
+.interests_choices {
+	width: 30.33%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+		 font-size: 15px;
+		  text-transform: uppercase;
+			margin:10px;
+
+}
+.personal_skills_choices, .communication_skills_choices, .technical_skills_choices, .education_school, .experiance, .interests_choices{
+	  border: solid 1px #c9c9c9;
+		border-radius: 4px;
+	background-color: #f1f1f1;
+		font-size: 15px;
+		margin-top: 2px;
+		padding:4px;
+}
+.interests_choices:disabled,.personal_skills_choices:disabled,.communication_skills_choices:disabled,
+ .technical_skills_choices:disabled, .education_school:disabled,.education_school[readonly], .experiance[readonly], .interests_choices:disabled{
+	-webkit-appearance: none;
+	 appearance: none;
+	 	border: none;
+		margin-top: 2px;
+		padding:4px;
+}
+
+
+.skills .row{
+
+	padding:5px;
+border: 2px solid #F0F0F0;
+height:45px;
+  background-color: #f1f1f1;
+}
+.skills .row .btn{
+	height: 30px;
+}
+
+.skills input[readonly] {
+	border: none;
+
+}
+
+.contacts a{
+	font-size: 50px;
+}
+.contacts a:hover{
+	text-decoration: none;
+}
+.contacts input[readonly]{
+	border: none;
+}
+
+
+
+.add_new_school, .delete, .add_new_training, .add_new_experiance, .add_another_skill_3, .add_another_skill_2, .add_another_skill_1{
+	margin-left:5px;
+		margin-top:5px;
+}
+.save{
+	width:110px;
+	color:#fff;
+}
+.profile_picture .fa{
+	font-size: 50px;
+	margin-top:5px;
+}
+.save{
+	visibility: hidden;
+}
+
+ .education_school, .training , .experiance{
+
+	   background-color: #f1f1f1;
+
+ }
+ #dynamicInput_5 li{
+	 margin-top:10px;
+ }
+ #dynamicInput_6 li{
+	margin-top:10px;
+ }
+
+ #dynamicInput_7 li{
+	margin-top:10px;
+ }
+ ul{
+	 list-style-type: none;
+ }
+.block{
+	background-color: #f1f1f1;
+	 padding: 10px;
+	 margin-top:10px;
+}
+ #default_button {
+ color: #333;
+ background-color: #fff;
+ border-color: #ccc;
+}
+
+ .add_another_interest{
+	 margin-left: 10px;
+ }
+#personal {
+     box-sizing: border-box;
+     resize: none;
+
+		 border: 1px  #f1f1f1 black;
+		 background-color: #fff;
+ }
+ #personal:disabled{
+	  border:none;
+	 background-color: #fff;
+ }
+
+ .new-vac-btn {
+	 margin-top: 5px;
+
+ }
+ #university-name{
+	 text-transform: uppercase;
+ }
+table td {border-right: 25px solid transparent; border-left: 15px solid transparent}
+#dynamicInput_2{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+#dynamicInput_1{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+#dynamicInput_3{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+#interestedIn, .interested{
+	display: inline;
+}
+#interestedIn{
+	font-family: Andale Mono, monospace;
+	color: green;
+}

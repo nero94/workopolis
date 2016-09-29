@@ -1,0 +1,41 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="/resources/css/main.css">
+        <link rel="stylesheet" href="/resources/css/navbar.css">
+  </head>
+<header id="header-main" class="row">
+   <div class="container logo container-logo">
+     <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sn-offset-3 col-xs-6 col-xs-offset-3">
+     <img src="/resources/img/workopolis_1.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     </div>
+   </div>
+   <div>
+      <nav class="navbar navbar-inverse ">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse myNavbar" id="myNavbar">
+               <ul class="nav navbar-nav" id="main-nav">
+                <li id="home"><a  href="/employer">My profile</a></li>
+                <li id="add_vacancy"><a href="/add_vacancy">Add Vacancy</a></li>
+                <li id="create-offer"><a href="/create-offer">Create Offer</a></li>
+                <li id="all-vacancies" ><a href="/vacancies">All vacancies</a></li>
+                <li id="my-offers"><a href="/employer/my_offers">My Offers</a></li>
+                <li id="my-interviews"><a href="/employer/interviews">Interviews</a></li>
+                <li id="my-schedule"><a href="/employer/schedule">Schedule</a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/logout" id="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </div>
+</header>
+
+</html>

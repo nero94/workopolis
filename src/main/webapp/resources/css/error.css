@@ -1,0 +1,30 @@
+.forbidden-window{
+	background-image: url(../img/403.jpeg);
+	margin-top: 55px;
+	height: 515px;
+	width: 455px!important;
+}
+
+
+.not-found-window{
+	background-image: url(../img/404.gif);
+	margin-top: 150px;
+	height: 213px;
+	width: 426px!important;
+}
+
+#not-found{
+	color: white;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.error-window{
+	background-image: url(../img/500.jpeg);
+	margin-top: 55px;
+	height: 575px!important;
+	width: 500px!important;
+}
+body{
+	background-image: url(../img/backg.png);
+}

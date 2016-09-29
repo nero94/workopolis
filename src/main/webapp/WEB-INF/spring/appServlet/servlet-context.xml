@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-4.0.xsd
+        http://www.springframework.org/schema/data/mongo
+        http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+	<sec:global-method-security
+		pre-post-annotations="enabled" />
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+	
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/jquery/**" location="/jquery/" />
+	<resources mapping="/bower_components/**" location="/bower_components/" />
+	<resources mapping="/home/**" location="/home/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/jsp/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+
+	<context:component-scan base-package="com.edvantis.workopolis" />
+
+
+	<!-- Hibernate Session Factory -->
+	<beans:bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="vacancyDAO"
+		class="com.edvantis.workopolis.dao.vacancy.VacancyDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="userDAO"
+		class="com.edvantis.workopolis.dao.user.UserDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="candidateDAO"
+		class="com.edvantis.workopolis.dao.candidate.CandidateDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="recruiterDAO"
+		class="com.edvantis.workopolis.dao.recruiter.RecruiterDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="adminDAO"
+		class="com.edvantis.workopolis.dao.admin.AdminDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="technicalSkillDAO"
+		class="com.edvantis.workopolis.dao.skill.TechnicalSkillDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="roleDAO"
+		class="com.edvantis.workopolis.dao.role.RoleDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="interviewDAO"
+		class="com.edvantis.workopolis.dao.interview.InterviewDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="employerDAO"
+		class="com.edvantis.workopolis.dao.employer.EmployerDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="managerDAO"
+		class="com.edvantis.workopolis.dao.manager.ManagerDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="interviewerDAO"
+		class="com.edvantis.workopolis.dao.interviewer.InterviewerDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="countryDAO"
+		class="com.edvantis.workopolis.dao.location.CountryDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="stateDAO"
+		class="com.edvantis.workopolis.dao.location.StateDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="cityDAO"
+		class="com.edvantis.workopolis.dao.location.CityDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="resultDAO"
+		class="com.edvantis.workopolis.dao.result.ResultDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="offerDAO"
+		class="com.edvantis.workopolis.dao.offer.OfferDAOImpl">
+	</beans:bean>
+
+	<beans:bean id="addressDAO"
+		class="com.edvantis.workopolis.dao.location.AddressDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="companyDAO"
+		class="com.edvantis.workopolis.dao.company.CompanyDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="educationDAO"
+		class="com.edvantis.workopolis.dao.education.EducationDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="universityDAO"
+		class="com.edvantis.workopolis.dao.university.UniversityDAOImpl">
+	</beans:bean>
+	
+	<beans:bean id="experienceDAO"
+		class="com.edvantis.workopolis.dao.experience.ExperienceDAOImpl">
+	</beans:bean>
+	
+
+
+	<!-- Configure bean to convert JSON to POJO and vice versa -->
+	<beans:bean id="jsonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	</beans:bean>
+
+
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</beans:bean>
+
+	<mongo:mongo host="127.0.0.1" port="27017" />
+	<mongo:db-factory dbname="workopolis" />
+
+	<beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<beans:constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+	</beans:bean>
+
+
+</beans:beans>

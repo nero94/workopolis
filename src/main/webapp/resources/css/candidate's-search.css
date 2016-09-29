@@ -1,0 +1,163 @@
+#candidate_search .back {
+/*	background: url('back.jpg');*/
+background-color: #F0F0F0;
+}
+
+
+#candidate_search .form-group {
+    display: inline-block;
+     margin-bottom: 14px;
+    vertical-align: middle;
+}
+
+#candidate_search .find{
+	background-color: #67e87d;
+  margin-top: 25px;
+}
+#candidate_search .btn-default:focus,
+#candidate_search .btn-default:hover{
+	background-color: #26d033;
+}
+
+#candidate_search h3{
+	 text-transform: uppercase;
+ }
+#candidate_search .container{
+    margin-top:30px;
+}
+
+
+
+@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
+#candidate_search .container {
+margin-top: 20px;
+}
+
+
+#candidate_search .mb20 { margin-bottom: 20px; }
+
+#candidate_search hgroup { padding-left: 15px; border-bottom: 1px solid #ccc; }
+#candidate_search hgroup h1 { font: 500 normal 1.625em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin-top: 0; line-height: 1.15; }
+#candidate_search hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin: 0; padding-bottom: 10px; }
+#candidate_search .active .glyphicon{color:white;}
+
+#candidate_search .index{
+	background: url('startup.jpg');
+}
+#candidate_search .search-result .thumbnail {
+	border-radius: 0 !important;
+	margin-top: 30px;
+}
+#candidate_search a.thumbnail:hover {
+    border-color: #009900;
+}
+#candidate_search .search-result:hover{
+	background-color: #e0ffa3;
+}
+#candidate_search .search-result .col{
+	 margin-top: 15px;
+}
+#candidate_search .search-result {
+ margin-top: 20px;
+ background-color: #ececec;
+ border-radius: 4px;
+}
+#candidate_search .search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
+#candidate_search .search-result ul { padding-left: 0 !important; list-style: none;  }
+#candidate_search .search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
+#candidate_search .search-result ul li i { padding-right: 5px; }
+#candidate_search .search-result .col-md-7 { position: relative; }
+#candidate_search .search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
+#candidate_search .search-result h3 > a, .search-result i { color: #248dc1 !important; }
+#candidate_search .search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; }
+#candidate_search .search-result span.plus { position: absolute; right: 0; top: 126px; }
+#candidate_search .search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
+#candidate_search .search-result span.plus a:hover { background-color: #414141; }
+#candidate_search .search-result span.plus a i { color: #fff !important; }
+#candidate_search .search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
+
+
+
+#candidate_search .search-result h3 > a, .search-result i {
+    color: #009900 !important;
+}
+
+@media (min-width: 992px){
+	#candidate_search .col-md-3 {
+    width: 25%;
+    margin-top: 15px;
+}
+
+	#candidate_search #vac-text{
+	margin-top: 15px;
+}
+	#candidate_search #glyphicons{
+	margin-top: 45px;
+}
+
+
+
+	#candidate_search .glyphicon {
+    font-size: 20px;
+}
+	#candidate_search #glyphicons{
+	padding-right:0px;
+}
+	#candidate_search .glyphicon-search{
+	font-size: 15px;
+}
+
+	#candidate_search .panel-body{
+	background-color:#e0ffa3;
+}
+	#candidate_search .personal_inf{
+
+	height: 45px;
+	text-overflow: ellipsis;
+	 overflow:hidden;
+	 white-space: nowrap;
+
+}
+	#candidate_search .skills .well{
+background-color: #a5ecb1;
+height:30px;
+padding-top: 5px;
+}
+
+	#candidate_search .well{
+  background-color: #fff;
+	border-radius: 0;
+	box-shadow: 0px 1px 1px 0px #a8acb0;
+}
+	#candidate_search .well .skills{
+  border-width: 1px 0px 1px 0px;
+  box-shadow: 0px 0px 0px;
+}
+	#candidate_search .well .interested{
+  border-width: 1px 0px 1px 0px;
+    box-shadow: 0px 0px 0px;
+}
+	#candidate_search .well .personal_inf  {
+   border-width: 1px 0px 1px 0px;
+  box-shadow: 0px 0px 0px;
+}
+
+.found-cand-photo{
+	margin-bottom: 15px;
+}
+
+.glyphicon-thumbs-up{
+	color: #4cab36;
+}
+
+#for-back-found-cand{
+	background-image: url(../img/backg.png);
+}
+
+.oops-window{
+	background-image: url(../img/suspicious-fry.jpeg);
+	margin-top: 55px;
+	height: 412px;
+	width: 553px;
+}

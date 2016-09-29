@@ -1,0 +1,146 @@
+#employer_profile #comp_name {
+  color:#228B22;
+}
+#employer_profile h2 {
+  text-align: center;
+}
+#employer_profile .recruiter-info {
+  margin-top: 15px;
+}
+#employer_profile .btn-success{
+  margin-left: 5px;
+}
+#employer_profile .btn-danger {
+  margin-left: 5px;
+}
+#employer_profile  label, input {
+  display: block;
+}
+#employer_profile label {
+  margin-top: 5px;
+}
+#employer_profile h1 {
+  text-align: center;
+}
+#employer_profile .manage-buttons {
+  margin-top: 30px;
+}
+#employer_profile {
+  margin-bottom: 50px;
+}
+#employer_profile input[readonly] {
+  border: none;
+}
+#change-logo{
+  display: none;
+}
+body{
+  background-image: url('../img/backg.png');
+}
+.for-proper-deleting{
+  background-color: #fff;
+}
+.delete-cand-experiance,
+.add-cand-experiance,
+.delete-cand-education,
+.add-cand-education,
+.delete-pers-skill,
+.add-pers-skill,
+.delete-com-skill,
+.add-com-skill,
+.delete-tech-skill,
+.add-tech-skill {
+  float: left;
+  width: 100%;
+  height: 32px;
+  display: block;
+  color: white;
+  background-color: #66b53e;
+  border: 9px;
+  border-color: #757575;
+}
+
+#university-header{
+  margin-left: 15px;
+}
+
+.for-back-ed{
+  background-color:#e4e4e4;
+  margin:15px;
+
+}
+
+#salary{
+  width: 100%;
+}
+
+#position{
+  width: 63.53333333%;
+}
+
+.second-ed-row{
+  margin-top: 15px;
+}
+.delete-existed-cand-experiance,
+.delete-existed-cand-education{ 
+ float: right;
+  width: 15%;
+  height: 32px;
+  margin: 15px;
+  display: block;
+  color: white;
+  background-color: #d61f1f;
+  border: 9px;
+  border-color: #757575;
+
+}
+
+.delete-existed-cand-experiance{
+  width: 100%;
+}
+
+.delete-cand-experiance,
+.delete-cand-education,
+.delete-pers-skill,
+.delete-com-skill,
+.delete-tech-skill {
+  background-color: #d61f1f;
+  visibility: hidden;
+}
+
+.hidden-visibility{
+  visibility: hidden;
+}
+
+.shown-visibility{
+  visibility: visible;
+}
+
+
+
+input {
+  line-height: 27px;
+}
+#title{
+	display:block;
+	width: 100%;
+}
+
+.ss_button { 
+  background-color: #ebffea;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  padding: 10px;
+  color: #FFFFFF;
+  }
+
+ .acord-head{
+  color: #333;
+  text-align: center;
+ } 
+  
+.ss_content {
+  background-color: #EFEFEF;
+  display: none;
+  padding: 10px;
+  }

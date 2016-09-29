@@ -1,0 +1,39 @@
+.cand-email{
+	color: #128212;
+}
+
+.glyphicon-info-sign{
+	font-size: 20px;
+	color: #128212;
+
+}
+
+.offer-state-option,
+.offer-state{
+	font-family: sans-serif;
+}
+
+.submit-offer-state{
+	margin-top: 15px;
+}
+
+.well-emp-offers {
+	background-color: #b3ecb5;
+}
+
+.offer-title-well{
+	background-color: #deebfb;
+}
+
+#offers-tbody{
+	font-size: 20px;
+}
+.for-changing-visibility{
+	display: none!important;
+}
+
+.for-making-invisible{
+	display: inline!important;
+}
+
+

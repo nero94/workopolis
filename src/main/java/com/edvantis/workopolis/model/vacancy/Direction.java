@@ -1,0 +1,17 @@
+package com.edvantis.workopolis.model.vacancy;
+
+public enum Direction {
+	ADMINISTRATION,
+	BUSINESS_ANALYSIS,
+	DESIGN,
+	DATABASES,
+	PROJECT_MANAGEMENT,
+	QUALITY_CONTROL,
+	SOFTWARE_DEVELOPMENT,
+	SYSTEM_ARCHITECTURE;
+	
+	
+    
+
+
+}

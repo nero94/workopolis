@@ -1,0 +1,42 @@
+div.pager span.active {
+    background:#dddddd;
+}
+div.pager span{
+  padding:10px;
+  font-size: 20px;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+}
+div.pager{
+  float:right;
+}
+
+.all_profiles table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+}
+
+body, div, h1 {
+  font-family: arial, sans-serif;
+}
+.all_profiles .tablesorter-default tr:nth-child(even) td {
+  background-color:#f0f6e9;
+  font-size: 15px;
+}
+.all_profiles .tablesorter-default tr:nth-child(odd) td {
+  background-color: #e6eae1;
+  font-size: 15px;
+}
+
+.all_profiles .tablesorter-default tr:hover td{
+    background-color: #eff2e9
+}
+
+.all_profiles td, .all_profiles th {
+    border: 2px solid #dfdfdf;
+    text-align: left;
+    padding: 8px;
+
+}

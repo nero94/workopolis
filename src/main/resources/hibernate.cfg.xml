@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="com.edvantis.workopolis.model.user.Role" />
+
+		<mapping class="com.edvantis.workopolis.model.user.UserRegistration" />
+		<mapping class="com.edvantis.workopolis.model.user.User" />
+
+		<mapping class="com.edvantis.workopolis.model.user.candidate.Candidate" />
+		<mapping class="com.edvantis.workopolis.model.user.Interviewer" />
+		<mapping class="com.edvantis.workopolis.model.user.employer.Employer" />
+		<mapping class="com.edvantis.workopolis.model.user.Administrator" />
+		<mapping class="com.edvantis.workopolis.model.user.Manager" />
+		<mapping class="com.edvantis.workopolis.model.user.Recruiter" />
+
+		<mapping class="com.edvantis.workopolis.model.user.employer.Offer" />
+
+		<mapping class="com.edvantis.workopolis.model.vacancy.Vacancy" />
+
+		<mapping class="com.edvantis.workopolis.model.interview.Interview" />
+		<mapping class="com.edvantis.workopolis.model.interview.InterviewResult" />
+
+		<mapping class="com.edvantis.workopolis.model.education.Education" />
+		<mapping class="com.edvantis.workopolis.model.education.University" />
+
+		<mapping class="com.edvantis.workopolis.model.skill.TechnicalSkill" />
+		<mapping class="com.edvantis.workopolis.model.skill.CommunicationSkill" />
+		<mapping class="com.edvantis.workopolis.model.skill.PersonalSkill" />
+
+		<mapping class="com.edvantis.workopolis.model.Experiance" />
+		<mapping class="com.edvantis.workopolis.model.Company" />
+
+		<mapping class="com.edvantis.workopolis.model.location.Address" />
+		<mapping class="com.edvantis.workopolis.model.location.Country" />
+		<mapping class="com.edvantis.workopolis.model.location.City" />
+		<mapping class="com.edvantis.workopolis.model.location.State" />
+
+
+	</session-factory>
+</hibernate-configuration>

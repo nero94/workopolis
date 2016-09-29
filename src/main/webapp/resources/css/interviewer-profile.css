@@ -1,0 +1,58 @@
+.int-name {
+  text-align: center;
+  font-size: 175%;
+  color: #757575;
+  font-weight: 300;
+}
+
+.int-name {
+	font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.interv-info {
+	background-color: #fdfbfb!important;
+  margin-top: 20px;
+}
+
+.intervs {
+	margin-top: 30px;
+}
+
+#my-int {
+	  font-size: 250%;
+}
+
+#int-info-head {
+	margin: 0;
+}
+
+#main-container input[readonly]{
+	 border: none;
+}
+
+.int-comment {
+	font-size: 175%;
+  	font-weight: 300;
+}
+
+
+#edit-int,
+#save-changes,
+#submit-result {
+  float: right;
+  width: 15%;
+  height: 50px;
+  display: block;
+  margin: 20px;
+  color: white;
+  background-color: #66b53e;
+  border: 9px;
+  border-color: #757575;
+}
+ #int-pages {
+ 	padding-left:445px;
+}
+ #int-pages>li>a,
+ #int-pages>li>span {
+ 	color: #66b53e;
+  }
